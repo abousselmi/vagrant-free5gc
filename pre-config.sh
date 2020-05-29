@@ -14,7 +14,7 @@ VAGRANT_UID='1000'
 SYNCED_FOLDER='/vagrant'
 WORKSPACE='free5gc-compose'
 
-log "Start bootstrap"
+log "Start pre-config script"
 
 log "Set environment variables"
 export DEBIAN_FRONTEND=noninteractive
@@ -23,6 +23,7 @@ log "Install dependencies"
 apt-get update -qq \
 	&& apt-get install -qq \
 		git \
+		build-essential \
 		vim \
 		strace \
 		net-tools \
@@ -33,6 +34,7 @@ log "Update kernel version: 5.0.0-23-generic"
 apt-get install -qq \
 		linux-image-5.0.0-23-generic \
 		linux-modules-5.0.0-23-generic \
+		linux-headers-5.0.0-23-generic \
 	&& grub-set-default 1 \
 	&& update-grub
 
@@ -76,4 +78,4 @@ mkdir -p $SYNCED_FOLDER/$WORKSPACE
 log "Git clone free5gc-compose project"
 git clone $FREE5GC_COMPOSE_REPO $SYNCED_FOLDER/$WORKSPACE
 
-log "End bootstrap"
+log "End pre-config script. Reload the box.."
