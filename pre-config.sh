@@ -68,7 +68,8 @@ docker --version
 
 log "Install docker-compose version: $DOCKER_COMPOSE_VERSION"
 curl -sL "https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
-	&& chmod +x /usr/local/bin/docker-compose
+	&& chmod +x /usr/local/bin/docker-compose \
+    && curl -L https://raw.githubusercontent.com/docker/compose/$DOCKER_COMPOSE_VERSION/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
 
 log "Verify docker-compose install"
 docker-compose --version
