@@ -18,4 +18,7 @@ cd /tmp \
     && make \
     && make install
 
+log "gtp5g kernel module is located here:"
+find /lib/modules/$(uname -r) -type f -name udp_tunnel*
+
 log "End post-config script"
