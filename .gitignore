@@ -1,3 +1,4 @@
 *.log
 .vagrant
-shared/free5gc-compose/
+shared/*
+!shared/README.md
