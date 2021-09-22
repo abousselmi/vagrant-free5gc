@@ -9,7 +9,7 @@ function logerr {
 }
 
 FREE5GC_COMPOSE_REPO='https://github.com/free5gc/free5gc-compose.git'
-DOCKER_COMPOSE_VERSION='1.25.5'
+DOCKER_COMPOSE_VERSION='1.29.2'
 VAGRANT_UID='1000'
 SYNCED_FOLDER='/vagrant'
 WORKSPACE='free5gc-compose'
