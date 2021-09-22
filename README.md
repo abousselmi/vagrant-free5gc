@@ -21,11 +21,16 @@ Once vagrant is installed, you need to add this plugin. It is needed for reloadi
 $ vagrant plugin install vagrant-reload
 ```
 
-## Update
+## Update the box configuration
 
 Please update the RAM and CPU values found in `Vagrantfile` to best fit you system configuration.
 
 ```console
 vb.memory = <memory in KB>
 vb.cpus = <number of cpus>
+```
+## Run it
+
+```console
+vagrant up
 ```
