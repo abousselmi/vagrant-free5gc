@@ -12,7 +12,7 @@ log "Start post-config script"
 
 log "Install gtp5g kernel module"
 cd /tmp \
-    && git clone https://github.com/PrinzOwO/gtp5g.git \
+    && git clone https://github.com/free5gc/gtp5g.git \
     && cd gtp5g \
     && make clean \
     && make \
